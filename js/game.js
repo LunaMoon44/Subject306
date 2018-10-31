@@ -1,5 +1,5 @@
 //Create a Phaser game with dimensions 800x600
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game-world');
+var game = new Phaser.Game(1300, 610, Phaser.AUTO, 'game-world');
 
 //Add the different games states
 game.state.add('boot', bootState);
