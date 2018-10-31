@@ -5,6 +5,7 @@ var loadState = {
 
     // load sprites
 game.load.image(0, 0, 'background');
+game.load.image(32, 45 'player');
 
   },
 
@@ -12,4 +13,4 @@ game.load.image(0, 0, 'background');
   game.state.start('menu');                               // load the menu
   }
 
-  };
+};
