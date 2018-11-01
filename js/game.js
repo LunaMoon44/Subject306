@@ -5,8 +5,8 @@ var game = new Phaser.Game(1300, 610, Phaser.AUTO, 'game-world');
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
-game.state.add('room1', );
-game.state.add('win', winState):
+game.state.add('room1', roomState1);
+game.state.add('win', winState);
 //Any game spanning variables/settings could be placed here
 game.global = {
   lives: 3
