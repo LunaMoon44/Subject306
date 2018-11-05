@@ -19,7 +19,7 @@ text.anchor.setTo(0.5,0.5);
 
 },
 start: function() {
-game.state.start('room1');
+game.state.start('roomOne');
 
-},
+}
 };
