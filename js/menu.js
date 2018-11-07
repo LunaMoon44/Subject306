@@ -2,13 +2,14 @@ var menuState = {
   create: function() {
   // title
 
-  title = game.add.text(game.world.centerX, game.world.centerY, 'Subject 306', {font: '50px Liquid Crystal', fill: '#93FE20'});
+  title = game.add.text(game.world.centerX, game.world.centerY, 'Subject 306', {font: '50px Arial', fill: '#93FE20'});
 
 // controls
-help = game.add.text(0, 510, '', {font:  "Ink Free", fontSize: "30px", fill: '#93FE20'});
+help = game.add.text(0, 0, '', {font:  "Arial", fontSize: "30px", fill: '#93FE20'});
   helpText = 'W A S D keys to move \n';
-  helpText = 'enter to select \n';
-  helpText = 'p to pick up';
+  helpText += 'enter to select \n';
+  helpText += 'p to pick up';
+  help.text = helpText;
 
 //button to START
 button = game.add.button(game.world.centerX, game.world.centerY);
