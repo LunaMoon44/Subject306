@@ -5,7 +5,7 @@ var loadState = {
 
     // load sprites
 game.load.image('bg test', 'assets/backgrounddoor.png'); //test backgrounddoor
-game.load.image('subject306', 'assets/subject 306 coloured.png');
+game.load.image('subject306', 'assets/subject306 fixedish.png');
   },
 
   create: function() {

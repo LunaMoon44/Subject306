@@ -2,21 +2,22 @@ var menuState = {
   create: function() {
   // title
 
-  title = game.add.text(game.world.centerX, game.world.centerY, 'Subject 306', {font: '50px Orbitron', fill: '#93FE20'});
+  title = game.add.text(500, 200, 'Subject 306', {font: '50px Orbitron', fill: '#93FE20'});
 
 // controls
-help = game.add.text(0, 0, '', {font:  "Special Elite", fontSize: "30px", fill: '#93FE20'});
+help = game.add.text(0, 450, '', {font:  "Special Elite", fontSize: "30px", fill: '#93FE20'});
   helpText = 'W A S D keys to move \n';
   helpText += 'enter to select \n';
   helpText += 'p to pick up';
   help.text = helpText;
 
 //button to START
-button = game.add.button(game.world.centerX, game.world.centerY);
-button.anchor.setTo(0.5,0.5);
+button = game.add.button(game.world.centerX-100, game.world.centerY-50);
+button.scale.setTo(6, 2);
+//button.anchor.setTo(0.5,0.5);
 button.onInputUp.add(this.start); //When the button is clicked, run the start function
 text = game.add.text(button.x,button.y,'START', {font: '50px Orbitron', fill: '#00ff00'});  //Some text for the button with arial font coloured green
-text.anchor.setTo(0.5,0.5);
+//text.anchor.setTo(0.5,0.5);
 
 },
 start: function() {
