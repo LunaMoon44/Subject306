@@ -9,12 +9,12 @@ var roomStateOne = {
   subject306.body.immovable = true;
 
   //player Movements
-  this.controls = game.input.keybored.addkeys(
+  this.controls = game.input.keyboard.addKeys(
     {
       'up': Phaser.KeyCode.W,
-      'down': Phaser.Keycode.S,
-      'left': Phaser.Keycode.A,
-      'right': Phaser.Keycode.D,
+      'down': Phaser.KeyCode.S,
+      'left': Phaser.KeyCode.A,
+      'right': Phaser.KeyCode.D,
       'select': Phaser.KeyCode.ENTER
     }
   )
@@ -23,19 +23,19 @@ var roomStateOne = {
 update: function() {
 
 //player Movements
-if(this.controls.up.isdown){
-  subject306.body.velocity.y = 150;
-}
-else if(this.controls.down.isdown){
+if(this.controls.up.isDown){
   subject306.body.velocity.y = -150;
+}
+else if(this.controls.down.isDown){
+  subject306.body.velocity.y = 150;
 }
 else {
   subject306.body.velocity.y = 0;
 }
-if(ths.controls.left.isdown){
+if(this.controls.left.isDown) {
   subject306.body.velocity.x = -150;
 }
-else if(this.controls.right.isdown){
+else if(this.controls.right.isDown){
   subject306.body.velocity.x = 150;
 }
 else {
