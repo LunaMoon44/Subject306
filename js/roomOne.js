@@ -3,7 +3,10 @@ var roomStateOne = {
   create: function() {
   game.add.sprite(250,31.5, 'bg test');
 
-  game.add.sprite(500, 63, 'subject306');
+  subject306 = game.add.sprite(500, 63, 'subject306');
+  game.physics.arcade.enable(subject306);
+  subject306.body.collideWorldBounds = true; // want to make it the background bounds
+  subject306.body.immovable = true;
 
   //player Movements
   this.controls = game.input.keybored.addkeys(
@@ -15,6 +18,30 @@ var roomStateOne = {
       'select': Phaser.KeyCode.ENTER
     }
   )
-  }
+},
+
+update: function() {
+
+//player Movements
+if(this.controls.up.isdown){
+  subject306.body.velocity.y = 150;
+}
+else if(this.controls.down.isdown){
+  subject306.body.velocity.y = -150;
+}
+else {
+  subject306.body.velocity.y = 0;
+}
+if(ths.controls.left.isdown){
+  subject306.body.velocity.x = -150;
+}
+else if(this.controls.right.isdown){
+  subject306.body.velocity.x = 150;
+}
+else {
+  subject306.body.velocity.x = 0;
+}
+}
+
 
 };
