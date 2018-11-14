@@ -6,6 +6,9 @@ var loadState = {
     // load sprites
 game.load.image('bg test', 'assets/backgrounddoor.png'); //test backgrounddoor
 game.load.image('subject306', 'assets/subject306 fixedish.png');
+game.load.image('key', 'assets/key.png');
+game.load.image('fakekey', 'assets/fakekey.png');
+game.load.image('riddle', 'assets/Riddle page.png');
   },
 
   create: function() {
