@@ -8,6 +8,12 @@ var roomStateOne = {
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
 
+player.animation.add('left', [6, 7, 6, 8], 10, true);
+palyer.animation.add('right', [9, 10, 9, 11], 10, true);
+player.animation.add('forward', [0, 1, 0, 2], 10, true);
+player.animation.add('back', [4, 5, 4, 6], 10, true);
+player.animation.add('still front', [0], 1, false);
+
 game.add.sprite(550, 66, 'key');
 game.add.sprite(550, 500, 'fakekey');
 game.add.sprite(500, 400, 'riddle');
