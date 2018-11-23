@@ -9,7 +9,7 @@ var roomStateOne = {
   subject306.body.immovable = true;
 
 player.animation.add('left', [9, 10, 9, 11], 10, true);
-palyer.animation.add('right', [6, 7, 6, 8], 10, true);
+player.animation.add('right', [6, 7, 6, 8], 10, true);
 player.animation.add('forward', [0, 1, 0, 2], 10, true);
 player.animation.add('back', [3, 4, 3, 5], 10, true);
 player.animation.add('still front', [0], 1, false);
