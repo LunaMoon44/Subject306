@@ -5,6 +5,7 @@ var roomStateOne = {
 
   subject306 = game.add.sprite(500, 63, 'subject306');
   game.physics.arcade.enable(subject306);
+  game.world.setBounds(250, 31.5,800, 537);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
 
@@ -44,10 +45,8 @@ else if(this.controls.down.isDown){
   subject306.body.velocity.y = 150;
   subject306.animations.play('forward');
 }
-else if{
-  subject306.body.velocity.y = 0;
-}
-if (this.controls.left.isDown) {
+
+else if(this.controls.left.isDown){
   subject306.body.velocity.x = -150;
   subject306.animations.play('left');
 }
@@ -56,8 +55,11 @@ else if(this.controls.right.isDown){
   subject306.animations.play('right');
 }
 else {
+  subject306.body.velocity.y = 0;
   subject306.body.velocity.x = 0;
+  subject306.animations.stop();
 }
+
 }
 
 
