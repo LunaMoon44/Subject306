@@ -44,10 +44,10 @@ else if(this.controls.down.isDown){
   subject306.body.velocity.y = 150;
   subject306.animations.play('forward');
 }
-else {
+else if{
   subject306.body.velocity.y = 0;
 }
-if(this.controls.left.isDown) {
+if (this.controls.left.isDown) {
   subject306.body.velocity.x = -150;
   subject306.animations.play('left');
 }
