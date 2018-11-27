@@ -1,7 +1,8 @@
 var roomStateOne = {
 
   create: function() {
-  game.add.sprite(250,31.5, 'cell room');
+  bg = game.add.sprite(game.world.width/2,game.world.height/2, 'cell room');
+  bg.anchor.setTo(0.5);
 
   subject306 = game.add.sprite(500, 63, 'subject306');
   game.physics.arcade.enable(subject306);
@@ -35,6 +36,9 @@ game.add.sprite(500, 400, 'riddle');
 },
 
 update: function() {
+//colitions
+game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
+
 
 //player Movements
 if(this.controls.up.isDown){
@@ -60,7 +64,11 @@ else {
   subject306.animations.stop();
 }
 
-}
+},
 
+
+nextroom: function(subject306, door) {
+  game.state.start('roomtwo');
+}
 
 };
