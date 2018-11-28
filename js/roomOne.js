@@ -4,8 +4,12 @@ var roomStateOne = {
   bg = game.add.sprite(game.world.width/2,game.world.height/2, 'cell room');
   bg.anchor.setTo(0.5);
 
+
+
   subject306 = game.add.sprite(500, 63, 'subject306');
   game.physics.arcade.enable(subject306);
+  subject306.enableBody = true;
+
   game.world.setBounds(250, 31.5,800, 537);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
@@ -33,6 +37,10 @@ game.add.sprite(500, 400, 'riddle');
       'select': Phaser.KeyCode.ENTER
     }
   )
+
+  door = game.add.sprite(520, 500, 'door');
+  game.physics.arcade.enable(door);
+  door.enableBody = true;
 },
 
 update: function() {
@@ -68,6 +76,7 @@ else {
 
 
 nextroom: function(subject306, door) {
+console.log('next');
   game.state.start('roomtwo');
 }
 

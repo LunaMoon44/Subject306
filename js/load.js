@@ -9,6 +9,7 @@ game.load.spritesheet('subject306', 'assets/subject306 finished-Sheet.png', 32, 
 game.load.image('key', 'assets/key.png');
 game.load.image('fakekey', 'assets/fakekey.png');
 game.load.image('riddle', 'assets/Riddle page.png');
+game.load.image('door', 'assets/cell room door.png');
   },
 
   create: function() {
