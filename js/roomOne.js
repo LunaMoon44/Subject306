@@ -14,7 +14,7 @@ var roomStateOne = {
   game.physics.arcade.enable(door);
   door.enableBody = true;
 
-game.add.sprite(500, 400, 'riddle');
+riddle = game.add.sprite(500, 400, 'riddle');
 riddle.enableBody = true;
 
   game.world.setBounds(250, 31.5,800, 537);
@@ -47,7 +47,7 @@ subject306.animations.add('still right', [6], 1, false);
 update: function() {
 //colitions
 game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
-game.physica.arcade.overlap(subject306, riddle, this.riddle, null, this);
+game.physics.arcade.overlap(subject306, riddle, this.riddle, null, this);
 
 //player Movements
 if(this.controls.up.isDown){
@@ -77,12 +77,12 @@ else {
 
 
 riddle: function(subject306, riddle) {
-  
-}
+
+},
 
 nextroom: function(subject306, door) {
 console.log('next');
-  //game.state.start('roomtwo');
+  game.state.start('roomtwo');
 }
 
 };
