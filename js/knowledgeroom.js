@@ -1,10 +1,10 @@
 var knowledgeStateroom = {
 
-create function:() {
+create: function() {
 
 },
 
-update function:(){
+update: function() {
 
 }
 

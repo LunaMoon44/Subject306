@@ -1,10 +1,10 @@
 var forestState = {
 
-create function:() {
+create: function() {
 
 },
 
-update function:(){
+update: function() {
 
 }
 

@@ -1,15 +1,15 @@
-var roomStatethree = {
+var roomthreeState = {
 
-create function:() {
-  bg = game.add.sprite(game.world.width/2,game.world.height/2, '');
+create: function() {
+  bg = game.add.sprite(game.world.width/2,game.world.height/2, 'bigroom');
   bg.anchor.setTo(0.5);
 
 
-  subject306 = game.add.sprite(, , 'subject306');
+  subject306 = game.add.sprite(0, 0, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(, , 'door');
+  door = game.add.sprite(500, 500, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
 
@@ -43,7 +43,7 @@ create function:() {
 
 },
 
-update function:(){
+update: function() {
 
 }
 

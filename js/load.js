@@ -5,11 +5,13 @@ var loadState = {
 
     // load sprites
 game.load.image('cell room', 'assets/cell room basic design 2.0 with furtinutre .png');
-game.load.image('corridor1', 'assets/corridor1.png');
+game.load.image('bigroom', 'assets/bigroompart1.png');
+game.load.image('dungonone', 'assets/Dungeon One.png');
 game.load.spritesheet('subject306', 'assets/subject306 finished-Sheet.png', 32, 64);
 game.load.image('key', 'assets/key.png');
 game.load.image('fakekey', 'assets/fakekey.png');
 game.load.image('riddle', 'assets/Riddle page.png');
+game.load.image('riddlepage', 'assets/paper screen.png');
 game.load.image('door', 'assets/cell room door.png');
   },
 

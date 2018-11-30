@@ -1,10 +1,10 @@
-var blakeStateroom = {
+var blackroomState = {
 
-create function:() {
+create: function() {
 
 },
 
-update function:(){
+update: function() {
 
 }
 
