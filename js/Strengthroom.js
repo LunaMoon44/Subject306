@@ -1,10 +1,10 @@
 var strengthStateroom = {
 
-create function:() {
+create: function() {
 
 },
 
-update function:(){
+update: function() {
 
 }
 

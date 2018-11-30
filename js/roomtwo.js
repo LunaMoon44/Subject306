@@ -1,6 +1,6 @@
 var roomStatetwo = {
   create: function() {
-bg = game.add.sprite(game.world.width,game.world.height -200, 'corridor1');
+bg = game.add.sprite(game.world.width,game.world.height -200, 'dungonone');
 bg.anchor.setTo(0.5);
 
 subject306 = game.add.sprite(500, 63, 'subject306');

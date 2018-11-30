@@ -1,6 +1,6 @@
 var splitStateroom = {
 
-create function:() {
+create: function() {
   bg = game.add.sprite(game.world.width/2,game.world.height/2, '');
   bg.anchor.setTo(0.5);
 
@@ -44,7 +44,7 @@ create function:() {
 
 },
 
-update function:(){
+update: function() {
 
 }
 
