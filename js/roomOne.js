@@ -5,7 +5,6 @@ var roomStateOne = {
   bg.anchor.setTo(0.5);
 
 
-
   subject306 = game.add.sprite(500, 63, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
@@ -15,6 +14,7 @@ var roomStateOne = {
   door.enableBody = true;
 
 riddle = game.add.sprite(500, 400, 'riddle');
+game.physics.arcade.enable(riddle);
 riddle.enableBody = true;
 
   game.world.setBounds(250, 31.5,800, 537);
@@ -77,6 +77,9 @@ else {
 
 
 riddle: function(subject306, riddle) {
+  console.log('riddle');
+riddlebg = game.add.sprite(250,50,'riddlepage');
+text = game.add.text(0,0,'', {font: "Kaushan Script", fill: "#000000"});
 
 },
 
