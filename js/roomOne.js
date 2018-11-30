@@ -79,8 +79,11 @@ else {
 riddle: function(subject306, riddle) {
   console.log('riddle');
 riddlebg = game.add.sprite(250,50,'riddlepage');
-text = game.add.text(0,0,'', {font: "Kaushan Script", fill: "#000000"});
-
+riddle = game.add.text(10, 40,'', {font: "Kaushan Script", fontSize: '40px' ,fill: "#000000"});
+riddleText = 'Subject 306, \n';
+riddleText += 'welcome to your new home youll be staying here for a while. \n';
+riddleText += 'enjoy your stay. \n';
+riddleText += 'P.s dont try and escape, no one wants a robot in their world.'
 },
 
 nextroom: function(subject306, door) {
