@@ -1,15 +1,20 @@
 var roomStatetwo = {
   create: function() {
-bg = game.add.sprite(game.world.width,game.world.height -200, 'dungonone');
+bg = game.add.sprite(game.world.width +100, game.world.height -150, 'dungonone');
 bg.anchor.setTo(0.5);
 
-subject306 = game.add.sprite(500, 63, 'subject306');
+subject306 = game.add.sprite(450, 163, 'subject306');
 game.physics.arcade.enable(subject306);
 subject306.enableBody = true;
 
-key = game.add.sprite(700, 100, 'key');
-game.physics.arcade.enable(key);
-key.enableBody = true;
+door = game.add.sprite(1050, 439, 'door');
+game.physics.arcade.enable(door);
+door.enableBody = true;
+door.scale.setTo(-0.5, 1);
+
+spikes = game.add.sprite(700, 300, 'spikes');
+game.physics.arcade.enable(spikes);
+spikes.enableBody = true;
 
 subject306.animations.add('left', [9, 10, 9, 11], 10, true);
 subject306.animations.add('right', [6, 7, 6, 8], 10, true);
@@ -19,6 +24,10 @@ subject306.animations.add('still front', [0], 1, false);
 subject306.animations.add('still back', [3], 1, false);
 subject306.animations.add('still left', [9], 1, false);
 subject306.animations.add('still right', [6], 1, false);
+
+game.world.setBounds(420, 100, 940, 537);
+subject306.body.collideWorldBounds = true; // want to make it the background bounds
+subject306.body.immovable = true;
 
 
   //player Movements
@@ -35,7 +44,9 @@ subject306.animations.add('still right', [6], 1, false);
   },
 
   update: function() {
-
+//colitions
+game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
+game.physics.arcade.overlap(subject306, spikes, this.Hit, null, this);
 
     //player Movements
     if(this.controls.up.isDown){
@@ -65,13 +76,15 @@ subject306.animations.add('still right', [6], 1, false);
 
 
 
-riddle: function(subject306, riddle) {
-
+Hit: function(subject306, spikes) {
+subject306.x = 450;
+subject306.y = 163;
+console.log('hit');
 },
 
 nextroom: function(subject306, door) {
 console.log('next');
-  game.state.start('roomtwo');
+  game.state.start('libary');
 }
 
 

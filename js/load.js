@@ -13,6 +13,7 @@ game.load.image('fakekey', 'assets/fakekey.png');
 game.load.image('riddle', 'assets/Riddle page.png');
 game.load.image('riddlepage', 'assets/paper screen.png');
 game.load.image('door', 'assets/cell room door.png');
+game.load.image('spikes', 'assets/Spikes.png');
   },
 
   create: function() {
