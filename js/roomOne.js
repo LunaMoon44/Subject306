@@ -75,15 +75,30 @@ else {
 
 },
 
-
 riddle: function(subject306, riddle) {
-  console.log('riddle');
-riddlebg = game.add.sprite(250,50,'riddlepage');
-riddle = game.add.text(10, 40,'', {font: "Kaushan Script", fontSize: '40px' ,fill: "#000000"});
+
+//riddlebg = game.add.sprite(250,50,'riddlepage');
+riddle = game.add.text(470, 160,'', {font: "Kaushan Script", fontSize: '30px' ,fill: "#000000"});
 riddleText = 'Subject 306, \n';
-riddleText += 'welcome to your new home youll be staying here for a while. \n';
+riddleText += 'welcome to your new home youll \n';
+riddleText += 'be staying here for a while. \n';
 riddleText += 'enjoy your stay. \n';
-riddleText += 'P.s dont try and escape, no one wants a robot in their world.'
+riddleText += 'P.s dont try and escape, \n';
+riddleText += 'no one wants a robot in their world.';
+riddle.text = riddleText;
+//riddle.visible = false;
+//riddlepage.visibe = false;
+
+riddle.inputEnabled = true;
+
+     riddle.input.useHandCursor = true;
+///
+     riddle.events.onInputDown.add(this.destroySprite, this);
+
+},
+destroySprite: function(riddle) {
+riddle.visible = false;
+    console.log('bye bye');
 },
 
 nextroom: function(subject306, door) {
