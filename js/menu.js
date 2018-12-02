@@ -1,7 +1,9 @@
 var menuState = {
   create: function() {
   // title
-
+  bg = game.add.sprite(game.world.width/2,game.world.height/2, 'menu bg');
+  bg.anchor.setTo(0.5);
+  
   title = game.add.text(500, 200, 'Subject 306', {font: '50px Orbitron', fill: '#93FE20'});
 
 // controls

@@ -5,8 +5,8 @@ create: function() {
 
 win = game.add.text(500, 200, '', {font: '40px Orbitron', fill: '#93FE20'});
 winText = 'Well done, you escaped \n';
-winText += 'try escaping from another route \n';
-winText += 'besides, we will catch you again';
+winText += 'Try escaping from another route \n';
+winText += 'Besides, we will catch you again';
 win.text = winText;
 
   button = game.add.button(game.world.centerX, game.world.centerY+250, 'button');           //add button sprite, coordinates world's center (X), World's center +250px (Y)
