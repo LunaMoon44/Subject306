@@ -5,7 +5,7 @@ var menuState = {
   title = game.add.text(500, 200, 'Subject 306', {font: '50px Orbitron', fill: '#93FE20'});
 
 // controls
-help = game.add.text(0, 450, '', {font:  "Special Elite", fontSize: "30px", fill: '#93FE20'});
+help = game.add.text(100, 450, '', {font:  "Special Elite", fontSize: "30px", fill: '#93FE20'});
   helpText = 'W A S D keys to move \n';
   helpText += 'enter to select \n';
   helpText += 'p to pick up';
