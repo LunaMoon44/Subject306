@@ -1,22 +1,38 @@
 var strengthStateroom = {
 
 create: function() {
-  bg = game.add.sprite(game.world.width -100, game.world.height -200, 'strength');
+  bg = game.add.sprite(game.world.width, game.world.height -200, 'strength');
   bg.anchor.setTo(0.5);
 
-  subject306 = game.add.sprite(400, 93, 'subject306');
+  subject306 = game.add.sprite(340, 263, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(550, 539, 'door');
+  door = game.add.sprite(1070, 580, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
 
-  riddle = game.add.sprite(500, 400, 'riddle');
-  game.physics.arcade.enable(riddle);
-  riddle.enableBody = true;
+  spikes = game.add.sprite(420, 400, 'spikes');
+  game.physics.arcade.enable(spikes);
+  spikes.enableBody = true;
 
-  game.world.setBounds(250, 31.5,800, 537);
+  spikes2 = game.add.sprite(590, 400, 'spikes');
+  game.physics.arcade.enable(spikes2);
+  spikes2.enableBody = true;
+
+  spikes3 = game.add.sprite(990, 400, 'spikes');
+  game.physics.arcade.enable(spikes3);
+  spikes3.enableBody = true;
+
+  spikes4 = game.add.sprite(770, 420, 'spikes');
+  game.physics.arcade.enable(spikes4);
+  spikes4.enableBody = true;
+
+  spikes5 = game.add.sprite(400, 280, 'spikes');
+  game.physics.arcade.enable(spikes5);
+  spikes5.enableBody = true;
+
+  game.world.setBounds(250, 31.5, 1000, 560);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
 
@@ -45,7 +61,12 @@ create: function() {
 
 update: function() {
   game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
-  game.physics.arcade.overlap(subject306, riddle, this.riddle, null, this);
+  game.physics.arcade.overlap(subject306, spikes, this.Hit, null, this);
+  game.physics.arcade.overlap(subject306, spikes2, this.Hit, null, this);
+  game.physics.arcade.overlap(subject306, spikes3, this.Hit, null, this);
+  game.physics.arcade.overlap(subject306, spikes4, this.Hit, null, this);
+  game.physics.arcade.overlap(subject306, spikes5, this.Hit, null, this);
+
 
   //player Movements
   if(this.controls.up.isDown){
@@ -71,6 +92,18 @@ update: function() {
     subject306.animations.stop();
   }
 
+},
+
+Hit: function(subject306, spikes) {
+subject306.x = 340;
+subject306.y = 263;
+console.log('hit');
+},
+
+nextroom: function(subject306, door) {
+console.log('next');
+  game.state.start('blank');
 }
+
 
 };
