@@ -7,10 +7,10 @@ subject306 = game.add.sprite(450, 163, 'subject306');
 game.physics.arcade.enable(subject306);
 subject306.enableBody = true;
 
-door = game.add.sprite(1050, 439, 'door');
+door = game.add.sprite(1370, 350, 'door');
 game.physics.arcade.enable(door);
 door.enableBody = true;
-door.scale.setTo(-0.5, 1);
+door.angle = 90;
 
 spikes = game.add.sprite(700, 300, 'spikes');
 game.physics.arcade.enable(spikes);
@@ -25,7 +25,7 @@ subject306.animations.add('still back', [3], 1, false);
 subject306.animations.add('still left', [9], 1, false);
 subject306.animations.add('still right', [6], 1, false);
 
-game.world.setBounds(420, 100, 940, 537);
+game.world.setBounds(420, 100, 980, 537);
 subject306.body.collideWorldBounds = true; // want to make it the background bounds
 subject306.body.immovable = true;
 
@@ -84,7 +84,7 @@ console.log('hit');
 
 nextroom: function(subject306, door) {
 console.log('next');
-  game.state.start('libary');
+  game.state.start('library');
 }
 
 

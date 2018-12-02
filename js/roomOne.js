@@ -9,7 +9,7 @@ var roomStateOne = {
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(530, 539, 'door');
+  door = game.add.sprite(550, 539, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
 

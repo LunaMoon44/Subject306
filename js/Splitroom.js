@@ -1,20 +1,25 @@
 var splitStateroom = {
 
 create: function() {
-  bg = game.add.sprite(game.world.width/2,game.world.height/2, '');
+  bg = game.add.sprite(game.world.width -80, game.world.height -160, 'splitroom');
   bg.anchor.setTo(0.5);
-
-
 
   subject306 = game.add.sprite(500, 63, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(530, 539, 'door');
+  door = game.add.sprite(1040, 420, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
+  door.angle = 450;
+
+  door2 = game.add.sprite(1040, 150, 'door');
+  game.physics.arcade.enable(door2);
+  door2.enableBody = true;
+  door2.angle = 450;
 
   riddle = game.add.sprite(500, 400, 'riddle');
+  game.physics.arcade.enable(riddle);
   riddle.enableBody = true;
 
   game.world.setBounds(250, 31.5,800, 537);
@@ -45,7 +50,53 @@ create: function() {
 },
 
 update: function() {
+  game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
+  game.physics.arcade.overlap(subject306, riddle, this.riddle, null, this);
+  game.physics.arcade.overlap(subject306, door2, this.nextroom2, null, this);
 
+  //player Movements
+  if(this.controls.up.isDown){
+    subject306.body.velocity.y = -150;
+  subject306.animations.play('back');
+  }
+  else if(this.controls.down.isDown){
+    subject306.body.velocity.y = 150;
+    subject306.animations.play('forward');
+  }
+
+  else if(this.controls.left.isDown){
+    subject306.body.velocity.x = -150;
+    subject306.animations.play('left');
+  }
+  else if(this.controls.right.isDown){
+    subject306.body.velocity.x = 150;
+    subject306.animations.play('right');
+  }
+  else {
+    subject306.body.velocity.y = 0;
+    subject306.body.velocity.x = 0;
+    subject306.animations.stop();
+  }
+
+},
+
+riddle: function(subject306, riddle) {
+  riddlebg = game.add.sprite(390,50,'riddlepage');
+  riddle = game.add.text(470, 160,'', {font: "Kaushan Script", fontSize: '30px' ,fill: "#000000"});
+riddleText = 'the room to the top is the room of strength \n';
+riddleText += 'the room on the bottom is the of knowledge';
+riddle.text = riddleText;
+},
+
+nextroom: function(subject306, door) {
+console.log('next');
+  game.state.start('knowledgeroom');
+},
+
+nextroom2: function(subject306, door2) {
+  console.log('bleh');
+  game.state.start('strengthroom');
 }
+
 
 };
