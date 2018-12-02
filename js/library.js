@@ -78,10 +78,10 @@ riddle: function(subject306, riddle) {
 
 riddlebg = game.add.sprite(390,50,'riddlepage');
 riddle = game.add.text(470, 160,'', {font: "Kaushan Script", fontSize: '30px' ,fill: "#000000"});
-riddleText = 'case file; Subject 306 \n';
-riddleText += 'age; 29   relatives; none \n';
-riddleText += 'description; been robot whole their life, programed to \n';
-riddleText += 'belive to be human, and will be tested for what its learned';
+riddleText = 'Case file; Subject 306 \n';
+riddleText += 'Age; 29   relatives; none \n';
+riddleText += 'Description; been robot whole their life, programed to \n';
+riddleText += 'Belive to be human, and will be tested for what its learned';
 riddle.text = riddleText;
 //riddle.visible = false;
 //riddlepage.visibe = false;
