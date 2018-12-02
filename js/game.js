@@ -7,12 +7,12 @@ game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add('roomOne', roomStateOne);
 game.state.add('roomtwo', roomStatetwo);
-game.state.add('libary', libaryState);
+game.state.add('library', libraryState);
 game.state.add('roomthree', roomthreeState);
+game.state.add('blank', blankState);
 game.state.add('splitroom', splitStateroom);
 game.state.add('strengthroom', strengthStateroom);
 game.state.add('knowledgeroom', knowledgeStateroom);
-//game.state.add('blackroom', blackroomState);
 game.state.add('forest', forestState);
 game.state.add('win', winState);
 //Any game spanning variables/settings could be placed here
