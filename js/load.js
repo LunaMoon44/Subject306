@@ -8,7 +8,7 @@ game.load.image('cell room', 'assets/cell room basic design 2.0 with furtinutre 
 game.load.image('library', 'assets/Library.png');
 game.load.image('splitroom', 'assets/neutral room basic design.png');
 game.load.image('strength', 'assets/strengthRoom.png');
-game.load.image('knowledge', 'assets/KnowledgerRoom.png');
+game.load.image('knowledge', 'assets/KnowledgeRoom.png');
 game.load.image('bigroom', 'assets/Final Room.png');
 game.load.image('blackroom', 'assets/running water room.png');
 game.load.image('forest', 'assets/forrest.png');

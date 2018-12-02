@@ -9,12 +9,13 @@ game.state.add('roomOne', roomStateOne);
 game.state.add('roomtwo', roomStatetwo);
 game.state.add('library', libraryState);
 game.state.add('roomthree', roomthreeState);
-game.state.add('blank', blankState);
 game.state.add('splitroom', splitStateroom);
 game.state.add('strengthroom', strengthStateroom);
 game.state.add('knowledgeroom', knowledgeStateroom);
+
 game.state.add('forest', forestState);
 game.state.add('win', winState);
+game.state.add('blank', blankState);
 //Any game spanning variables/settings could be placed here
 game.global = {
   lives: 3
