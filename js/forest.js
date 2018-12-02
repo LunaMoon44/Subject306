@@ -1,7 +1,7 @@
 var forestState = {
 
 create: function() {
-  bg = game.add.sprite(game.world.width -100, game.world.height -200, 'forrest');
+  bg = game.add.sprite(game.world.width -100, game.world.height -200, 'forest');
   bg.anchor.setTo(0.5);
 
   subject306 = game.add.sprite(400, 93, 'subject306');
@@ -12,9 +12,6 @@ create: function() {
   game.physics.arcade.enable(door);
   door.enableBody = true;
 
-  riddle = game.add.sprite(500, 400, 'riddle');
-  game.physics.arcade.enable(riddle);
-  riddle.enableBody = true;
 
   game.world.setBounds(250, 31.5,800, 537);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
@@ -70,6 +67,11 @@ update: function() {
     subject306.body.velocity.x = 0;
     subject306.animations.stop();
   }
+},
+
+nextroom: function(subject306, door) {
+console.log('next');
+  game.state.start('win');
 }
 
 };
