@@ -44,7 +44,33 @@ create: function() {
 },
 
 update: function() {
+  game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
+  game.physics.arcade.overlap(subject306, riddle, this.riddle, null, this);
 
+  //player Movements
+  if(this.controls.up.isDown){
+    subject306.body.velocity.y = -150;
+  subject306.animations.play('back');
+  }
+  else if(this.controls.down.isDown){
+    subject306.body.velocity.y = 150;
+    subject306.animations.play('forward');
+  }
+
+  else if(this.controls.left.isDown){
+    subject306.body.velocity.x = -150;
+    subject306.animations.play('left');
+  }
+  else if(this.controls.right.isDown){
+    subject306.body.velocity.x = 150;
+    subject306.animations.play('right');
+  }
+  else {
+    subject306.body.velocity.y = 0;
+    subject306.body.velocity.x = 0;
+    subject306.animations.stop();
+  }
+  
 }
 
 };
