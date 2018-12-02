@@ -1,18 +1,18 @@
-var strengthStateroom = {
+var libraryState = {
 
 create: function() {
-  bg = game.add.sprite(game.world.width -100, game.world.height -200, 'strength');
+  bg = game.add.sprite(game.world.width -100, game.world.height -200, 'library');
   bg.anchor.setTo(0.5);
 
-  subject306 = game.add.sprite(400, 93, 'subject306');
+  subject306 = game.add.sprite(490, 243, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(550, 539, 'door');
+  door = game.add.sprite(800, 539, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
 
-  riddle = game.add.sprite(500, 400, 'riddle');
+  riddle = game.add.sprite(700, 400, 'riddle');
   game.physics.arcade.enable(riddle);
   riddle.enableBody = true;
 
@@ -44,6 +44,7 @@ create: function() {
 },
 
 update: function() {
+  //colitions
   game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
   game.physics.arcade.overlap(subject306, riddle, this.riddle, null, this);
 
@@ -71,6 +72,34 @@ update: function() {
     subject306.animations.stop();
   }
 
-}
+},
 
-};
+riddle: function(subject306, riddle) {
+
+riddlebg = game.add.sprite(390,50,'riddlepage');
+riddle = game.add.text(470, 160,'', {font: "Kaushan Script", fontSize: '30px' ,fill: "#000000"});
+riddleText = 'case file; Subject 306 \n';
+riddleText += 'age; 29   relatives; none \n';
+riddleText += 'description; been robot whole their life, programed to \n';
+riddleText += 'belive to be human, and will be tested for what its learned';
+riddle.text = riddleText;
+//riddle.visible = false;
+//riddlepage.visibe = false;
+
+//riddle.inputEnabled = true;
+
+     //riddle.input.useHandCursor = true;
+///
+     //riddle.events.onInputDown.add(this.destroySprite, this);
+
+},
+//destroySprite: function(riddle) {
+//riddle.visible = false;
+    //console.log('bye bye');
+
+    nextroom: function(subject306, door) {
+    console.log('next');
+      game.state.start('splitroom');
+    },
+
+}
