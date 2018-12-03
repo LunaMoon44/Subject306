@@ -36,14 +36,15 @@ create: function() {
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
 
-  subject306.animations.add('left', [9, 10, 9, 11], 10, true);
-  subject306.animations.add('right', [6, 7, 6, 8], 10, true);
-  subject306.animations.add('forward', [0, 1, 0, 2], 10, true);
-  subject306.animations.add('back', [3, 4, 3, 5], 10, true);
-  subject306.animations.add('still front', [0], 1, false);
-  subject306.animations.add('still back', [3], 1, false);
-  subject306.animations.add('still left', [9], 1, false);
-  subject306.animations.add('still right', [6], 1, false);
+  subject306.animations.add('left', [9, 10, 9, 11], 10, true);                      //add movement with sprite sheet animations (frams 9, 10, 11, speed 10, true)
+  subject306.animations.add('right', [6, 7, 6, 8], 10, true);                       //add movement with sprite sheet animation (frame 6, 7, 8, speed 10, true)
+  subject306.animations.add('forward', [0, 1, 0, 2], 10, true);                     //add movement with sprite sheet animation (frame 0, 1, 2, speed 10, true)
+  subject306.animations.add('back', [3, 4, 3, 5], 10, true);                        //add movement with sprite sheet animation (frame 3, 4, 5, speed, true)
+  subject306.animations.add('still front', [0], 1, false);                          //idel posistion (frame 0, speed 1, [repeat] false)
+  subject306.animations.add('still back', [3], 1, false);                           //idel posistion (frame 3, speed 1, false)
+  subject306.animations.add('still left', [9], 1, false);                           //idle posistion (frame 9, speed 1, false)
+  subject306.animations.add('still right', [6], 1, false);                          //idel, posistion (frame 6, speed 1, false)
+
 
 
   //player Movements
