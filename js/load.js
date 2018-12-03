@@ -11,7 +11,7 @@ game.load.image('strength', 'assets/strengthRoom.png');
 game.load.image('knowledge', 'assets/KnowledgeRoom.png');
 game.load.image('bigroom', 'assets/Final Room.png');
 game.load.image('blackroom', 'assets/running water room.png');
-game.load.image('forest', 'assets/forrest.png');
+game.load.image('forest', 'assets/cave.png');
 game.load.image('dungonone', 'assets/Dungeon One.png');
 game.load.spritesheet('subject306', 'assets/subject306 finished-Sheet.png', 32, 64);
 game.load.image('key', 'assets/key.png');
