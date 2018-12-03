@@ -16,17 +16,17 @@ spikes = game.add.sprite(700, 300, 'spikes');
 game.physics.arcade.enable(spikes);
 spikes.enableBody = true;
 
-spikes = game.add.sprite(880, 230, 'spikes');
-game.physics.arcade.enable(spikes);
-spikes.enableBody = true;
+spikes1 = game.add.sprite(880, 230, 'spikes');
+game.physics.arcade.enable(spikes1);
+spikes1.enableBody = true;
 
-spikes = game.add.sprite(700, 430, 'spikes');
-game.physics.arcade.enable(spikes);
-spikes.enableBody = true;
+spikes2 = game.add.sprite(700, 430, 'spikes');
+game.physics.arcade.enable(spikes2);
+spikes2.enableBody = true;
 
-spikes = game.add.sprite(900, 530, 'spikes');
-game.physics.arcade.enable(spikes);
-spikes.enableBody = true;
+spikes3 = game.add.sprite(900, 530, 'spikes');
+game.physics.arcade.enable(spikes3);
+spikes3.enableBody = true;
 
 
 subject306.animations.add('left', [9, 10, 9, 11], 10, true);
@@ -60,6 +60,9 @@ subject306.body.immovable = true;
 //colitions
 game.physics.arcade.overlap(subject306, door, this.nextroom, null, this);
 game.physics.arcade.overlap(subject306, spikes, this.Hit, null, this);
+game.physics.arcade.overlap(subject306, spikes1, this.Hit, null, this);
+game.physics.arcade.overlap(subject306, spikes2, this.Hit, null, this);
+game.physics.arcade.overlap(subject306, spikes3, this.Hit, null, this);
 
     //player Movements
     if(this.controls.up.isDown){
