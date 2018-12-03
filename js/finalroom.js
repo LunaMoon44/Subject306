@@ -4,7 +4,7 @@ create: function() {
 bg = game.add.sprite(game.world.width +100, game.world.height -150, 'finalroom');
 bg.anchor.setTo(0.5);
 
-subject306 = game.add.sprite(450, 163, 'subject306');
+subject306 = game.add.sprite(1300, 233, 'subject306');
 game.physics.arcade.enable(subject306);
 subject306.enableBody = true;
 
