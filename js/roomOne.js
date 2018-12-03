@@ -15,7 +15,9 @@ var roomStateOne = {
 
 riddle = game.add.sprite(500, 400, 'riddle');
 game.physics.arcade.enable(riddle);
+riddle.inputEnabled = true;
 riddle.enableBody = true;
+riddle.events.onInputDown.add(this.listener,this);
 
   game.world.setBounds(250, 31.5,800, 537);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
@@ -73,11 +75,20 @@ else {
   subject306.animations.stop();
 }
 
+
+},
+listener: function(riddle) {
+
+riddlebg.visible = false;
+riddle.text = '';
+subject306.x += 50;
+console.log('touch');
+
 },
 
 riddle: function(subject306, riddle) {
 
-//riddlebg = game.add.sprite(250,50,'riddlepage');
+riddlebg = game.add.sprite(250,50,'riddlepage');
 riddle = game.add.text(470, 160,'', {font: "Kaushan Script", fontSize: '30px' ,fill: "#000000"});
 riddleText = 'Subject 306, \n';
 riddleText += 'welcome to your new home youll \n';
@@ -86,24 +97,12 @@ riddleText += 'enjoy your stay. \n';
 riddleText += 'P.s dont try and escape, \n';
 riddleText += 'no one wants a robot in their world.';
 riddle.text = riddleText;
-//riddle.visible = false;
-//riddlepage.visibe = false;
 
-riddle.inputEnabled = true;
-
-     riddle.input.useHandCursor = true;
-///
-     riddle.events.onInputDown.add(this.destroySprite, this);
-
-},
-destroySprite: function(riddle) {
-riddle.visible = false;
-    console.log('bye bye');
 },
 
 nextroom: function(subject306, door) {
 console.log('next');
-  game.state.start('finalroom');
+  game.state.start('roomtwo');
 }
 
 };
