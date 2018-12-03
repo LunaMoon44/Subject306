@@ -9,11 +9,12 @@ winText += 'Try escaping from another route \n';
 winText += 'Besides, we will catch you again';
 win.text = winText;
 
-  button = game.add.button(game.world.centerX, game.world.centerY+250, 'button');           //add button sprite, coordinates world's center (X), World's center +250px (Y)
-  button.anchor.setTo(0.5,0.5);                                                             //button is anchored to 0.5 (X), 0.5 (Y)
-  button.onInputUp.add(this.restart);                                                       //When the button is clicked, run the 'restart' function
-  text = game.add.text(button.x,button.y,'PLAY AGAIN');                                     // add text that says 'play again' at the buttons Coordinance
-  text.anchor.setTo(0.5,0.5);                                                               // set the text anchor to 0.5 (X), 0.5 (Y)
+button = game.add.button(game.world.centerX, game.world.centerY+150);
+button.scale.setTo(6, 2);
+//button.anchor.setTo(0.5,0.5);
+button.onInputUp.add(this.restart); //When the button is clicked, run the start function
+text = game.add.text(button.x,button.y,'MENU', {font: '50px Orbitron', fill: '#93FE20'});  //Some text for the button with arial font coloured green
+//text.anchor.setTo(0.5,0.5);
 
 },
 
