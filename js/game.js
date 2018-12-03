@@ -2,11 +2,11 @@
 var game = new Phaser.Game(1300, 610, Phaser.AUTO, 'game-world');
 
 //Add the different games states
-game.state.add('boot', bootState);
-game.state.add('load', loadState);
-game.state.add('menu', menuState);
-game.state.add('finalroom', finalroomState);
-game.state.add('roomOne', roomStateOne);
+game.state.add('boot', bootState); //The function that starts running the game
+game.state.add('load', loadState); //The function that loads all the assets into the game
+game.state.add('menu', menuState); //The Function that brings up the menu to start the game
+game.state.add('finalroom', finalroomState); //the function that loads the final puzzle room in the game
+game.state.add('roomOne', roomStateOne); //the function that loads the first puzzleroom
 game.state.add('roomtwo', roomStatetwo);
 game.state.add('library', libraryState);
 game.state.add('roomthree', roomthreeState);
