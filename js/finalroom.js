@@ -1,6 +1,9 @@
 var finalroomState = {
 
 create: function() {
+
+  game.add.sprite(0,0,'White Background');                                        //A Semi-white background beneath the room to make the game seem more appealing
+
 bg = game.add.sprite(game.world.width -90, game.world.height -180, 'finalroom');
 bg.anchor.setTo(0.5);
 

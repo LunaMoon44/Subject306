@@ -1,6 +1,9 @@
 var roomStateOne = {
 
   create: function() {
+
+    game.add.sprite(0,0,'White Background');                                      //A Semi-white background beneath the room to make the game seem more appealing
+
   bg = game.add.sprite(game.world.width/2,game.world.height/2, 'cell room');       //add cell room background and have it half from the world center width and height wise
   bg.anchor.setTo(0.5);
 

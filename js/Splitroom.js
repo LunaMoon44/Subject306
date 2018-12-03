@@ -1,6 +1,9 @@
 var splitStateroom = {
 
 create: function() {
+
+  game.add.sprite(0,0,'White Background');                                        //A Semi-white background beneath the room to make the game seem more appealing
+
   bg = game.add.sprite(game.world.width -80, game.world.height -160, 'splitroom');
   bg.anchor.setTo(0.5);
 
