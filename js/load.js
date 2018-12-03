@@ -23,6 +23,7 @@ game.load.image('spikes', 'assets/Spikes.png');
 game.load.audio('water', 'assets/Running Water.mp3');
 game.load.audio('soundtrack', 'assets/Dungeon Music.mp3');
 game.load.image('menu bg', 'assets/Menu Page.png')
+game.load.image('finalroom', 'assets/Final Room.png');
   },
 
   create: function() {

@@ -5,6 +5,7 @@ var game = new Phaser.Game(1300, 610, Phaser.AUTO, 'game-world');
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
+game.state.add('finalroom', finalroomState);
 game.state.add('roomOne', roomStateOne);
 game.state.add('roomtwo', roomStatetwo);
 game.state.add('library', libraryState);
@@ -12,7 +13,6 @@ game.state.add('roomthree', roomthreeState);
 game.state.add('splitroom', splitStateroom);
 game.state.add('strengthroom', strengthStateroom);
 game.state.add('knowledgeroom', knowledgeStateroom);
-
 game.state.add('forest', forestState);
 game.state.add('win', winState);
 game.state.add('blank', blankState);

@@ -102,7 +102,7 @@ console.log('hit');
 
 nextroom: function(subject306, door) {
 console.log('next');
-  game.state.start('blank');
+  game.state.start('finalroom');
 }
 
 

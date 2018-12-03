@@ -103,7 +103,7 @@ riddle.visible = false;
 
 nextroom: function(subject306, door) {
 console.log('next');
-  game.state.start('roomtwo');
+  game.state.start('finalroom');
 }
 
 };
