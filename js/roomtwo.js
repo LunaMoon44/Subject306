@@ -16,6 +16,19 @@ spikes = game.add.sprite(700, 300, 'spikes');
 game.physics.arcade.enable(spikes);
 spikes.enableBody = true;
 
+spikes = game.add.sprite(880, 230, 'spikes');
+game.physics.arcade.enable(spikes);
+spikes.enableBody = true;
+
+spikes = game.add.sprite(700, 430, 'spikes');
+game.physics.arcade.enable(spikes);
+spikes.enableBody = true;
+
+spikes = game.add.sprite(900, 530, 'spikes');
+game.physics.arcade.enable(spikes);
+spikes.enableBody = true;
+
+
 subject306.animations.add('left', [9, 10, 9, 11], 10, true);
 subject306.animations.add('right', [6, 7, 6, 8], 10, true);
 subject306.animations.add('forward', [0, 1, 0, 2], 10, true);

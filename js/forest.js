@@ -1,19 +1,19 @@
 var forestState = {
 
 create: function() {
-  bg = game.add.sprite(game.world.width -100, game.world.height -200, 'forest');
+  bg = game.add.sprite(game.world.width -300, game.world.height -200, 'forest');
   bg.anchor.setTo(0.5);
 
-  subject306 = game.add.sprite(400, 93, 'subject306');
+  subject306 = game.add.sprite(490, 393, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(550, 539, 'door');
+  door = game.add.sprite(560, 550, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
 
 
-  game.world.setBounds(250, 31.5,800, 537);
+  game.world.setBounds(250, 31.5, 900, 537);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
 

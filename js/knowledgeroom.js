@@ -4,7 +4,7 @@ create: function() {
   bg = game.add.sprite(game.world.width +100, game.world.height -200, 'knowledge');
   bg.anchor.setTo(0.5);
 
-  subject306 = game.add.sprite(420, 260, 'subject306');
+  subject306 = game.add.sprite(490, 260, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
@@ -94,7 +94,7 @@ riddle.text = riddleText;
 },
 
 Hit: function(subject306, door) {
-subject306.x = 420;
+subject306.x = 490;
 subject306.y = 260;
 console.log('hit');
 },

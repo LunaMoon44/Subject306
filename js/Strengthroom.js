@@ -1,7 +1,7 @@
 var strengthStateroom = {
 
 create: function() {
-  bg = game.add.sprite(game.world.width, game.world.height -200, 'strength');
+  bg = game.add.sprite(game.world.width -70, game.world.height -200, 'strength');
   bg.anchor.setTo(0.5);
 
   subject306 = game.add.sprite(340, 263, 'subject306');

@@ -5,6 +5,8 @@ bg = game.add.sprite(0, 0, 'blackroom');
 Water = game.add.audio('Water', 1, true);
 Water.play();
 
+hint = game.add.text(900, 600, 'press enter', {font: "Special Elite", fontSize: "20px", fill: '#FFFFFF'});
+
 this.controls = game.input.keyboard.addKeys(  //adding perpouse for keys
   {
      'up1': Phaser.KeyCode.UP,                //the UP key is now 'up1'
@@ -21,7 +23,7 @@ this.controls = game.input.keyboard.addKeys(  //adding perpouse for keys
 update: function() {
 
 if(this.controls.select.isDown){
-game.state.start('forest');  
+game.state.start('forest');
 }
 
 }

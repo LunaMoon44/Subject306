@@ -8,12 +8,12 @@ create: function() {
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
 
-  door = game.add.sprite(1040, 420, 'door');
+  door = game.add.sprite(1090, 420, 'door');
   game.physics.arcade.enable(door);
   door.enableBody = true;
   door.angle = 450;
 
-  door2 = game.add.sprite(1040, 150, 'door');
+  door2 = game.add.sprite(1090, 150, 'door');
   game.physics.arcade.enable(door2);
   door2.enableBody = true;
   door2.angle = 450;
@@ -22,7 +22,7 @@ create: function() {
   game.physics.arcade.enable(riddle);
   riddle.enableBody = true;
 
-  game.world.setBounds(250, 31.5,800, 537);
+  game.world.setBounds(250, 31.5, 900, 537);
   subject306.body.collideWorldBounds = true; // want to make it the background bounds
   subject306.body.immovable = true;
 
