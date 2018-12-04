@@ -1,9 +1,9 @@
 var loadState = {
   preload: function() {
-    //Add a line of text to the screen
+    //The loading text
     loadingLabel = game.add.text(80, 150, 'loading...', {font: '30px Courier', fill: '#ffffff'}); //text to say loading...
 
-    // load sprites
+    //The sprites,assets and audio needed for the game
 game.load.image('cell room', 'assets/Cell Room.png');
 game.load.image('library', 'assets/Library.png');
 game.load.image('splitroom', 'assets/neutral room basic design.png');

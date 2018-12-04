@@ -1,19 +1,19 @@
 var blankState = {
 
 create: function() {
-bg = game.add.sprite(0, 0, 'blackroom');
-Water = game.add.audio('water', 1, true);
+bg = game.add.sprite(0, 0, 'blackroom');  //The water/blackroom image
+Water = game.add.audio('water', 1, true); //The audio for running water
 Water.play();
 
-hint = game.add.text(900, 600, 'press enter', {font: "Special Elite", fontSize: "20px", fill: '#FFFFFF'});
+hint = game.add.text(900, 600, 'press enter', {font: "Special Elite", fontSize: "20px", fill: '#FFFFFF'}); //text to help the player
 
-this.controls = game.input.keyboard.addKeys(  //adding purpose for keys
+this.controls = game.input.keyboard.addKeys(  //Key Functions
   {
-     'up1': Phaser.KeyCode.UP,                //the UP key is now 'up1'
-     'down1': Phaser.KeyCode.DOWN,            //the DOWN key is now 'down1'
-     'up2': Phaser.KeyCode.W,                 //the W key is now 'up2'
-     'down2': Phaser.KeyCode.S,               //the S key is now 'down2'
-     'select': Phaser.KeyCode.ENTER         //the ENTER is now 'select'
+     'up1': Phaser.KeyCode.UP,                //The Up Key
+     'down1': Phaser.KeyCode.DOWN,            //The Down Key
+     'up2': Phaser.KeyCode.W,                 //The second Up Key
+     'down2': Phaser.KeyCode.S,               //The second down key
+     'select': Phaser.KeyCode.ENTER         //The Select Key
   }
 )
 
@@ -22,7 +22,7 @@ this.controls = game.input.keyboard.addKeys(  //adding purpose for keys
 
 update: function() {
 
-if(this.controls.select.isDown){
+if(this.controls.select.isDown){  //If enter is selected go to the next room
 game.state.start('forest');
 }
 
