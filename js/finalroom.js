@@ -4,10 +4,10 @@ create: function() {
 
   game.add.sprite(0,0,'White Background');                                        //A Semi-white background beneath the room to make the game seem more appealing
 
-  Soundtrack = game.add.audio('soundtrack', 1, true);
+  Soundtrack = game.add.audio('soundtrack', 1, true);                            //music added
   Soundtrack.play();
-  
-bg = game.add.sprite(game.world.width -90, game.world.height -180, 'finalroom');
+
+bg = game.add.sprite(game.world.width -90, game.world.height -180, 'finalroom'); 
 bg.anchor.setTo(0.5);
 
 subject306 = game.add.sprite(1890, 323, 'subject306');
