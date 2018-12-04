@@ -3,6 +3,8 @@ var roomStatetwo = {
 
     game.add.sprite(0,0,'White Background');                                      //A Semi-white background beneath the room to make the game seem more appealing
 
+    Soundtrack = game.add.audio('soundtrack', 1, true);
+    Soundtrack.play();
 
 bg = game.add.sprite(game.world.width +100, game.world.height -150, 'dungonone'); //add dungonone sprite
 bg.anchor.setTo(0.5);                                                            //anchor background

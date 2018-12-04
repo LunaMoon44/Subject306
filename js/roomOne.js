@@ -7,6 +7,8 @@ var roomStateOne = {
   bg = game.add.sprite(game.world.width/2,game.world.height/2, 'cell room');       //add cell room background and have it half from the world center width and height wise
   bg.anchor.setTo(0.5);
 
+  Soundtrack = game.add.audio('soundtrack', 1, true);
+  Soundtrack.play();
 
   subject306 = game.add.sprite(500, 63, 'subject306');                             //add subject 306
   game.physics.arcade.enable(subject306);                                          //enable physics for subject306

@@ -7,6 +7,8 @@ create: function() {
   bg = game.add.sprite(game.world.width/2,game.world.height/2, 'bigroom');
   bg.anchor.setTo(0.5);
 
+  Soundtrack = game.add.audio('soundtrack', 1, true);
+  Soundtrack.play();
 
   subject306 = game.add.sprite(0, 0, 'subject306');
   game.physics.arcade.enable(subject306);

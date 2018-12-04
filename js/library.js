@@ -4,6 +4,9 @@ create: function() {
   bg = game.add.sprite(game.world.width -100, game.world.height -200, 'library');
   bg.anchor.setTo(0.5);
 
+  Soundtrack = game.add.audio('soundtrack', 1, true);
+  Soundtrack.play();
+
   subject306 = game.add.sprite(490, 243, 'subject306');
   game.physics.arcade.enable(subject306);
   subject306.enableBody = true;
